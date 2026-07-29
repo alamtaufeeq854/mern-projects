@@ -20,12 +20,14 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // Allow all origins
 // app.use(cors());
-
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173",
+      "https://book-store-frontend-osc9.onrender.com",
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: "Content-Type",
+    allowedHeaders: ["Content-Type"],
   }),
 );
 
