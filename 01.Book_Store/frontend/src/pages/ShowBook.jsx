@@ -13,7 +13,7 @@ const ShowBook = () => {
     setLoading(true);
 
     axios
-      .get(`http://localhost:5555/books/${id}`)
+      .get(`https://book-store-frontend-osc9.onrender.com/books/${id}`)
       .then((response) => {
         setBooks(response.data.book);
         console.log(response.data.book);
