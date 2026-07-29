@@ -2,10 +2,174 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+   <link rel="icon" href="./icons/mern-stack.png" type="image/png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blank</title>
+
+    <title>MERN Stack Projects</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet" />
+
+    <style>
+      * {
+        font-family: "Inter", sans-serif;
+      }
+
+      body {
+        background: radial-gradient(
+          circle at top left,
+          #89b9a4 0%,
+          #62cded 40%,
+          #dff6ff 100%
+        );
+      }
+    </style>
   </head>
-  <body>
-    <h1>Work in progress</h1>
+
+  <body class="text-gray-800">
+    <!-- Header -->
+
+    <header
+      class="sticky top-0 backdrop-blur-xl bg-white/70 border-b border-slate-200 z-50">
+      <div
+        class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+        <h1
+          class="text-xl font-extrabold bg-gradient-to-r from-green-500 via-emerald-600 to-teal-600 bg-clip-text text-transparent">
+          MERN Stack Projects
+        </h1>
+
+        <div class="flex gap-6 font-semibold text-sm">
+          <a
+            href="https://github.com/alamtaufeeq854"
+            target="_blank"
+            class="hover:text-green-700 transition">
+            GitHub
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/alamtaufeeq854/"
+            target="_blank"
+            class="hover:text-emerald-600 transition">
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+
+    <section class="max-w-6xl mx-auto px-6 py-20 text-center">
+      <div
+        class="inline-flex items-center gap-3 px-5 py-3 rounded-full bg-green-100 text-green-700 text-4xl font-semibold mb-8">
+        <img src="./icons/mern.png" class="w-10 h-10 object-contain" alt="" />
+
+        MERN Stack Projects
+      </div>
+    </section>
+
+    <!-- Projects -->
+
+    <section class="max-w-7xl mx-auto px-6 pb-20">
+      <div id="grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer
+      class="py-8 border-t border-slate-200 text-center text-gray-600 font-medium">
+      Building scalable full-stack applications with the MERN Stack.
+    </footer>
+
+    <script>
+      const projects = [
+        {
+          id: "01",
+
+          name: "Book Store",
+
+          desc: "A full-stack Book Store application built with MongoDB, Express.js, React, and Node.js, featuring CRUD operations and RESTful APIs",
+
+          icon: "./icons/book-store.png",
+
+          live: "https://book-store-frontend-osc9.onrender.com/",
+
+          code: "https://github.com/alamtaufeeq854/mern-projects/tree/main/01.Book_Store",
+
+          color: "from-green-500 to-emerald-600",
+        },
+      ];
+
+      const grid = document.getElementById("grid");
+
+      projects.forEach((project) => {
+        const card = document.createElement("div");
+
+        card.className =
+          "group bg-white/80 backdrop-blur-xl rounded-3xl p-6 border border-slate-200 shadow-md hover:shadow-2xl transition duration-300 hover:-translate-y-2";
+
+        card.innerHTML = `
+        
+        <span
+        class="inline-block px-3 py-1 rounded-full bg-slate-100 text-xs font-bold mb-5">
+        
+        Project ${project.id}
+        
+        </span>
+
+        <div class="flex items-center gap-4">
+
+        <div
+        class="w-16 h-16 rounded-2xl bg-green-100 flex items-center justify-center">
+
+        <img
+        src="${project.icon}"
+        class="w-10 h-10 object-contain"/>
+
+        </div>
+
+        <h4
+        class="text-2xl font-bold bg-gradient-to-r ${project.color} bg-clip-text text-transparent">
+        
+        ${project.name}
+        
+        </h4>
+
+        </div>
+
+        <p class="mt-5 text-gray-600 leading-7">
+        
+        ${project.desc}
+        
+        </p>
+
+        <div class="flex gap-3 mt-8">
+
+        <a
+        href="${project.live}"
+        target="_blank"
+        class="flex-1 text-center py-3 rounded-xl text-white font-bold bg-gradient-to-r ${project.color}">
+        
+        Live Demo
+        
+        </a>
+
+        <a
+        href="${project.code}"
+        target="_blank"
+        class="flex-1 text-center py-3 rounded-xl border border-slate-300 font-semibold hover:bg-slate-100 transition">
+        
+        Source Code
+        
+        </a>
+
+        </div>
+
+        `;
+        grid.appendChild(card);
+      });
+    </script>
   </body>
 </html>
