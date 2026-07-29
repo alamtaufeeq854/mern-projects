@@ -7,6 +7,7 @@ import { BsInfoCircle } from "react-icons/bs";
 import { MdOutlineAddBox, MdOutlineDelete } from "react-icons/md";
 import BooksTable from "../components/home/BooksTable.jsx";
 import BooksCard from "../components/home/BooksCard.jsx";
+import BackHomeButton from "../components/BackToHome.jsx";
 
 const Home = () => {
   const [books, setBooks] = useState([]);
@@ -30,6 +31,7 @@ const Home = () => {
 
   return (
     <div className="p-4">
+      <BackHomeButton />
       <div className="flex justify-center items-center gap-x-4">
         <button
           className="bg-sky-300 hover:bg-sky-600 px-4 py-1 rounded-lg"

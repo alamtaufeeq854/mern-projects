@@ -32,11 +32,15 @@ const BookModal = ({ book, onClose }) => {
           <h2 className="my-1">{book.author}</h2>
         </div>
 
-        <p className="mt-4">Anything you want to show !</p>
-        <p className="my-2">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia
-          dignissimos nulla recusandae reiciendis adipisci placeat quis
-          aspernatur libero doloremque quo.
+        <p className="mt-4 font-semibold text-lg">About this Book</p>
+
+        <p className="my-2 text-gray-600 leading-7">
+          This book offers valuable insights, engaging content, and a
+          well-structured reading experience. Whether you're exploring the
+          subject for the first time or expanding your existing knowledge, it
+          provides meaningful information and practical perspectives. Browse the
+          details above to learn more about this title, including its author and
+          publication year.
         </p>
       </div>
     </div>
