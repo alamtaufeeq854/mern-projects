@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-   <link rel="icon" href="./icons/mern-stack.png" type="image/png" />
+    <link rel="icon" href="./icons/mern-stack.png" type="image/png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>MERN Stack Projects</title>
@@ -29,7 +29,7 @@
     </style>
   </head>
 
-  <body class="text-gray-800">
+  <body class="min-h-screen flex flex-col text-gray-800">
     <!-- Header -->
 
     <header
@@ -63,16 +63,20 @@
 
     <section class="max-w-6xl mx-auto px-6 py-20 text-center">
       <div
-        class="inline-flex items-center gap-3 px-5 py-3 rounded-full bg-green-100 text-green-700 text-4xl font-semibold mb-8">
+        class="inline-flex items-center gap-3 px-5 py-3 rounded-full bg-green-100 text-green-700 text-xl font-semibold mb-8">
         <img src="./icons/mern.png" class="w-10 h-10 object-contain" alt="" />
 
         MERN Stack Projects
       </div>
+
+      <p class="mt-6 text-lg text-gray-700 max-w-3xl mx-auto">
+        A collection of full-stack web applications built with MongoDB,
+        Express.js, React, and Node.js.
+      </p>
     </section>
 
     <!-- Projects -->
-
-    <section class="max-w-7xl mx-auto px-6 pb-20">
+    <section class="flex-1 max-w-7xl mx-auto px-6 pb-20">
       <div id="grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
     </section>
 
