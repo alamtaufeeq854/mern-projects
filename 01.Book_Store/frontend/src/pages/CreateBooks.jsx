@@ -21,7 +21,7 @@ const CreateBooks = () => {
     setLoading(true);
 
     axios
-      .post(`https://book-store-frontend-osc9.onrender.com/books`, data)
+      .post(`https://mern-projects-nlm9.onrender.com/books`, data)
       .then(() => {
         setLoading(false);
         navigate("/");
