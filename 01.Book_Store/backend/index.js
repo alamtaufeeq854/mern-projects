@@ -6,7 +6,7 @@ import { Book } from "./models/bookModel.js";
 import booksRoute from "./routes/bookRoutes.js";
 import dotenv from "dotenv";
 import swaggerUi from "swagger-ui-express";
-import swaggerDocument from "./swagger-output.json" with { type: "json" };
+import swaggerSpec from "./swagger.js";
 
 dotenv.config();
 
@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 5555;
 
 // Middlewares
 app.use(express.json());
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 // Allow all origins
 // app.use(cors());
@@ -30,6 +30,10 @@ app.use(
     allowedHeaders: ["Content-Type"],
   }),
 );
+
+app.get("/swagger.json", (req, res) => {
+  res.json(swaggerSpec);
+});
 
 app.get("/", (req, res) => {
   console.log(req);
