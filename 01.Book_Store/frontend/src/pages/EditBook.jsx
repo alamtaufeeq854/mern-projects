@@ -39,7 +39,7 @@ const EditBook = () => {
     setLoading(true);
 
     axios
-      .put(`http://localhost:5555/books/${id}`, data)
+      .put(`https://mern-projects-nlm9.onrender.com/books/${id}`, data)
       .then(() => {
         setLoading(false);
         navigate("/");
