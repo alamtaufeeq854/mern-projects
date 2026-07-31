@@ -17,9 +17,9 @@ const EditBook = () => {
     axios
       .get(`https://mern-projects-nlm9.onrender.com/books/${id}`)
       .then((response) => {
-        setAuthor(response.data.author);
-        setPublishYear(response.data.publishYear);
-        setTitle(response.data.title);
+        setAuthor(response.data.book.author);
+        setPublishYear(response.data.book.publishYear);
+        setTitle(response.data.book.title);
         setLoading(false);
       })
       .catch((error) => {
@@ -57,7 +57,7 @@ const EditBook = () => {
       <h1 className="text-3xl my-4">Edit Book </h1>
       {loading ? <Spinner /> : ""}
 
-      <div className="flex flex-col border-2 border-sky-400 rounded-xl w-[600px] p-4 mx-auto">
+      <div className="flex flex-col border-2 border-sky-400 rounded-xl sm:w-[600px] p-4 mx-auto">
         <div className="my-4">
           <label className="text-xl mr-4 text-gray-500">Title</label>
           <input

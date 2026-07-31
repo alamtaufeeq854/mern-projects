@@ -11,23 +11,14 @@ const BooksTable = ({ books }) => {
   const [selectedBook, setSelectedBook] = useState(null);
 
   return (
-    <table className="w-full border-separate border-spacing-2 ">
+    <table className="sm:w-full min-[500px]:max-[545px]:w-[480px] w-[300px] border-separate sm:border-spacing-2 border-spacing-1">
       <thead>
         <tr>
           <th className="border border-slate-600 rounded-md"> No </th>
           <th className="border border-slate-600 rounded-md"> Title </th>
-          <th className="border border-slate-600 rounded-md max-md:hidden">
-            {" "}
-            Author{" "}
-          </th>
-          <th className="border border-slate-600 rounded-md max-md:hidden">
-            {" "}
-            Publish Year{" "}
-          </th>
-          <th className="border border-slate-600 rounded-md max-md:hidden">
-            {" "}
-            Operations{" "}
-          </th>
+          <th className="border border-slate-600 rounded-md">Author</th>
+          <th className="border border-slate-600 rounded-md">Publish Year</th>
+          <th className="border border-slate-600 rounded-md">Operations</th>
         </tr>
       </thead>
 
@@ -42,16 +33,16 @@ const BooksTable = ({ books }) => {
               {book.title}
             </td>
 
-            <td className="border border-slate-700 rounded-md text-center max-md:hidden">
+            <td className="border border-slate-700 rounded-md text-center">
               {book.author}
             </td>
 
-            <td className="border border-slate-700 rounded-md text-center max-md:hidden">
+            <td className="border border-slate-700 rounded-md text-center">
               {book.publishYear}
             </td>
 
             <td className="border border-slate-700 rounded-md text-center">
-              <div className="flex justify-center gap-x-4">
+              <div className="flex justify-center sm:gap-x-4 gap-x-3">
                 <BiShow
                   className="text-3xl text-blue-800 hover:text-black cursor-pointer"
                   onClick={() => {

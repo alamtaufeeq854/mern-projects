@@ -34,7 +34,7 @@ const BookModal = ({ book, onClose }) => {
 
         <p className="mt-4 font-semibold text-lg">About this Book</p>
 
-        <p className="my-2 text-gray-600 leading-7">
+        <p className="my-2 text-gray-600 leading-5">
           This book offers valuable insights, engaging content, and a
           well-structured reading experience. Whether you're exploring the
           subject for the first time or expanding your existing knowledge, it
