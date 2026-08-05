@@ -2,6 +2,8 @@
 import HomePage from "./pages/HomePage.jsx";
 import CreatePage from "./pages/CreatePage.jsx";
 import NoteDetailPage from "./pages/NoteDetailPage.jsx";
+import { Link } from "react-router";
+import { ArrowBigLeft } from "lucide-react";
 import { Route, Routes } from "react-router";
 // import toast from "react-hot-toast";
 
@@ -9,6 +11,14 @@ const App = () => {
   return (
     <div className="relative h-full w-full">
       <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_60%,#00FF9D40_100%)]" />
+      <div className="flex items-center gap-4">
+        <Link
+          to={"https://alamtaufeeq854.github.io/mern-projects/"}
+          className="btn btn-secondary px-5 mt-1 mb-1">
+            <ArrowBigLeft/>
+          <span>Back</span>
+        </Link>
+      </div>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/create" element={<CreatePage />} />

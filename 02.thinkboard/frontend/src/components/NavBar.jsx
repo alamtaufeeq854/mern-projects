@@ -10,7 +10,6 @@ const NavBar = () => {
           <h1 className="text-3xl font-bold text-primary font-mono tracking-tight">
             ThinkBoard
           </h1>
-
           <div className="flex items-center gap-4">
             <Link to={"/create"} className="btn btn-primary">
               <PlusIcon className="h-5 w-5" />
