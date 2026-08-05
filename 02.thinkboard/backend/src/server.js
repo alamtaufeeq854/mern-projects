@@ -16,13 +16,14 @@ const __dirname = path.resolve();
 
 // Middlewares
 
-if (process.env.NODE_ENV !== "production") {
-  app.use(
-    cors({
-      origin: "http://localhost:5173",
-    }),
-  );
-}
+app.use(
+  cors({
+    origin: [
+      "https://thinkboard-frontend-32d8.onrender.com",
+      "http://localhost:5173",
+    ],
+  }),
+);
 
 app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerSpec));
 
