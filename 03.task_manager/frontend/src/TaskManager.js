@@ -146,10 +146,12 @@ const TaskManager = () => {
   };
 
   return (
-    <div className="d-flex flex-column align-items-center w-50 m-auto mt-5">
-      <h1 className="mb-4">Task Manager App</h1>
-      <div className="d-flex justify-content-between align-items-center mb-4 w-100">
-        <div className="input-group flex-grow-1 me-2">
+    <div
+      className="d-flex flex-column align-items-center w-50 m-auto mt-5 px-3"
+      style={{ maxWidth: "700px" }}>
+      <h1 className="mb-4 ">Task Manager App</h1>
+      <div className="d-flex flex-column flex-md-row justify-content-between align-items-stretch align-items-md-center mb-4 w-100 gap-2">
+        <div className="input-group flex-grow-1 me-md-2">
           <input
             value={input}
             onChange={(e) => {
@@ -182,13 +184,13 @@ const TaskManager = () => {
         {tasks?.map((item) => (
           <div
             key={item._id}
-            className="m-2 p-2 border bg-light w-100 
-        rounded-3 d-flex justify-content-between 
-        align-items-center">
-            <span className={item.isDone ? "text-decoration-line-through" : ""}>
+            className="m-2 p-2 border bg-light w-100 rounded-3 d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-2">
+            <span
+              className={`text-break ${
+                item.isDone ? "text-decoration-line-through" : ""
+              }`}>
               {item.taskName}
             </span>
-
             <div className="">
               <button
                 onClick={() => {
