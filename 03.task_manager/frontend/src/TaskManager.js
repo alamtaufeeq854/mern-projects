@@ -159,7 +159,7 @@ const TaskManager = () => {
             }}
             type="text"
             className="form-control me-1"
-            placeholder="Add a new Task"
+            placeholder="Add Task"
           />
 
           <button onClick={handleTask} className="btn btn-success btn-sm me-2">
@@ -175,7 +175,7 @@ const TaskManager = () => {
             onChange={handleSearch}
             type="text"
             className="form-control"
-            placeholder="Search task"
+            placeholder="Search Task"
           />
         </div>
       </div>
