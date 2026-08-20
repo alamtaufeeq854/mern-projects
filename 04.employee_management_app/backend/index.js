@@ -13,7 +13,16 @@ connectToDB();
 
 const PORT = process.env.PORT || 8080;
 
-app.use(cors());
+const corsOptions = {
+  origin: [
+    "http://localhost:3000",
+    "https://employee-management-jwrv.onrender.com/employee",
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
 
 app.use(bodyParser.json());
 
@@ -25,6 +34,6 @@ app.get("/", (req, res) => {
   res.send("Employee Management server is running !");
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`PORT is running at: ${PORT}`);
 });
