@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 8080;
 const corsOptions = {
   origin: [
     "http://localhost:3000",
-    "https://employee-management-jwrv.onrender.com/employee",
+    "https://employee-management-jwrv.onrender.com",
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
