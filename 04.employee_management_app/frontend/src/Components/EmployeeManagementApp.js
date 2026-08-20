@@ -4,6 +4,7 @@ import { GetAllEmployees, deleteEmployeeById } from "../api.js";
 import AddEmployee from "./AddEmployee.js";
 import { notify } from "../utils.js";
 import { ToastContainer } from "react-toastify";
+import { Link } from "react-router-dom";
 
 const EmployeeManagementApp = () => {
   const [showModal, setShowModal] = useState(false);
@@ -63,9 +64,14 @@ const EmployeeManagementApp = () => {
 
   return (
     <div className="d-flex flex-column justify-content-center align-items-center w-100 p-3">
+      <Link
+        to="https://alamtaufeeq854.github.io/mern-projects/"
+        className="me-auto mb-3 btn btn-secondary border-0 rounded">
+        Back
+      </Link>
       <h1>Employee Management App</h1>
       <div className="w-100 d-flex justify-content-center">
-        <div className="w-80 border bg-light p3" style={{ width: "80%" }}>
+        <div className="w-80 border bg-light p3" style={{ width: "100%" }}>
           <div className="d-flex justify-content-between mb-3">
             <button
               onClick={() => {

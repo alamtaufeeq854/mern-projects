@@ -12,7 +12,7 @@ const EmployeeTable = ({
   const { currentPage, totalPages } = pagination || {};
   const TableRow = ({ employee }) => {
     return (
-      <tr>
+      <tr >
         <td>
           <Link
             to={`/employee/${employee._id}`}
@@ -24,7 +24,7 @@ const EmployeeTable = ({
         <td>{employee.email}</td>
         <td>{employee.phone}</td>
         <td>{employee.department}</td>
-        <td>
+        <td className="d-flex flex-row">
           <i
             className="bi bi-pencil-fill text-warning me-4"
             role="button"
@@ -69,7 +69,7 @@ const EmployeeTable = ({
   };
 
   return (
-    <>
+    <div className="table-responsive">
       <table className="table table-striped">
         <thead>
           <tr>
@@ -92,7 +92,7 @@ const EmployeeTable = ({
         </tbody>
       </table>
       <div className="d-flex justify-content-between align-items-center my-3">
-        <span className="badge bg-primary">
+        <span className="badge bg-primary m-1">
           Page {currentPage} of {totalPages}
         </span>
 
@@ -124,7 +124,7 @@ const EmployeeTable = ({
           Next
         </button>
       </div>
-    </>
+    </div>
   );
 };
 
