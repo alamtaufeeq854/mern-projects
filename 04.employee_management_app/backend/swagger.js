@@ -15,6 +15,10 @@ const options = {
         url: "http://localhost:8080",
         description: "Local Server",
       },
+      {
+        url: "https://employee-management-backend-k970.onrender.com",
+        description: "Production Server",
+      },
     ],
   },
 
