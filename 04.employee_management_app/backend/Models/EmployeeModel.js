@@ -27,7 +27,7 @@ const EmployeeSchema = new Schema(
     profileImage: {
       type: String,
       default:
-        "https://static.vecteezy.com/system/resources/previews/018/742/015/original/minimal-profile-account-symbol-user-interface-theme-3d-icon-rendering-illustration-isolated-in-transparent-background-png.png",
+        "https://static.vecteezy.com/system/resources/thumbnails/033/051/579/small_2x/user-interface-icon-png.png",
     },
 
     salary: {

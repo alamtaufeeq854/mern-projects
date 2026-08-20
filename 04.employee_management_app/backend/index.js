@@ -4,6 +4,8 @@ const bodyParser = require("body-parser");
 const { connectToDB } = require("./Models/db.js");
 const EmployeeRoutes = require("./Routes/EmployeeRoutes.js");
 const cors = require("cors");
+const swaggerUi = require("swagger-ui-express");
+const swaggerSpec = require("./swagger");
 
 const app = express();
 
@@ -14,6 +16,8 @@ const PORT = process.env.PORT || 8080;
 app.use(cors());
 
 app.use(bodyParser.json());
+
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.use("/api/employees", EmployeeRoutes);
 

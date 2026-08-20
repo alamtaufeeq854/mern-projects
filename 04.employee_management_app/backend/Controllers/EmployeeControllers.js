@@ -11,9 +11,13 @@ const createEmployee = async (req, res) => {
       });
     }
 
-    const body = req.body;
-    const profileImage = req.file ? req.file?.path : null;
-    body.profileImage = profileImage;
+    const body = { ...req.body };
+
+    if (req.file) {
+      body.profileImage = req.file.path;
+    } else {
+      delete body.profileImage;
+    }
     const emp = new Employee(body);
     await emp.save();
 
