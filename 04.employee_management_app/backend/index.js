@@ -28,6 +28,13 @@ app.use(bodyParser.json());
 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
+app.get("/test", (req, res) => {
+  res.json({
+    success: true,
+    message: "Backend is working",
+  });
+});
+
 app.use("/api/employees", EmployeeRoutes);
 
 app.get("/", (req, res) => {
