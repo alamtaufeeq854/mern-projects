@@ -31,7 +31,10 @@ const EmployeeDetails = () => {
           <div className="row-mb-3">
             <div className="col md-3 ">
               <img
-                src={empDetails.profileImage}
+                src={
+                  empDetails?.profileImage ||
+                  "https://static.vecteezy.com/system/resources/thumbnails/033/051/579/small_2x/user-interface-icon-png.png"
+                }
                 alt={empDetails.name}
                 className="img-fluid rounded "
                 style={{

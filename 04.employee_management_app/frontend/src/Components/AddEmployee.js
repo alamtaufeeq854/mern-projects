@@ -55,7 +55,7 @@ const AddEmployee = ({
 
     try {
       const { success, message } = updateMode
-        ? await updateEmployeeById
+        ? await updateEmployeeById(employee, employee._id)
         : await createEmployee(employee);
       if (success) {
         notify(message, "success");

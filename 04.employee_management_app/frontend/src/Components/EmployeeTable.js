@@ -12,7 +12,7 @@ const EmployeeTable = ({
   const { currentPage, totalPages } = pagination || {};
   const TableRow = ({ employee }) => {
     return (
-      <tr >
+      <tr>
         <td>
           <Link
             to={`/employee/${employee._id}`}
@@ -107,6 +107,7 @@ const EmployeeTable = ({
 
         {pageNumbers.map((page) => (
           <button
+            key={page}
             onClick={() => {
               handlePagination(page);
             }}
