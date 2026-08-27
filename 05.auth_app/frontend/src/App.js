@@ -14,6 +14,15 @@ const App = () => {
 
   return (
     <div className="App">
+      <button
+        className="back"
+        onClick={() =>
+          (window.location.href =
+            "https://alamtaufeeq854.github.io/mern-projects/")
+        }>
+        Back
+      </button>
+
       <RefreshHandler setIsAuthenticated={setIsAuthenticated} />
       <Routes>
         <Route path="/" element={<Navigate to="/login" />} />
