@@ -10,6 +10,15 @@ label {
   font-size: 20px;
 }
 
+.back {
+  position: fixed;
+  top: 0;
+  left: 15px;
+  border-radius: 25px;
+  padding: 12px;
+  background-color: rgb(215, 3, 106);
+}
+
 html,
 body {
   height: 100%;
