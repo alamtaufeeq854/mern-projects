@@ -20,5 +20,6 @@ A full-stack Task Manager application built with **React, Node.js, Express.js, a
 
 ## Links
 
+- [Live Demo](https://task-manager-w2bw.onrender.com/)
 - [Swagger Docs](https://task-manager-backend-ha5t.onrender.com/api-docs/)
 - [Postman Docs](https://documenter.getpostman.com/view/55362925/2sBY4WpHUF)
