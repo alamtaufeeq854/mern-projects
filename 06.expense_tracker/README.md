@@ -18,7 +18,7 @@ A full-stack expense management application built with **React.js, Node.js, Expr
 
 ### Links
 
-- 🚀 **Live:** https://expense-tracker-p1vn.onrender.com/login
+- 🚀 **Live:** https://expense-tracker-p1vn.onrender.com
 
 - 📘 **Swagger:** https://expense-tracker-backend-gz09.onrender.com/api-docs/
 
