@@ -36,7 +36,7 @@ const Home = () => {
         return;
       }
       const result = await response.json();
-      setExpenses(result.data);
+      setExpenses(result.data || []);
     } catch (error) {
       handleError(error);
     }
@@ -59,7 +59,7 @@ const Home = () => {
         return;
       }
       const result = await response.json();
-      setExpenses(result.data);
+      setExpenses(result.data || []);
       handleSuccess(result.message);
     } catch (error) {
       handleError(error);
@@ -82,7 +82,7 @@ const Home = () => {
         return;
       }
       const result = await response.json();
-      setExpenses(result.data);
+      setExpenses(result.data || []);
       handleSuccess(result.message);
     } catch (error) {
       handleError(error);
