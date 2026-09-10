@@ -1,0 +1,49 @@
+.content {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 20px;
+}
+
+button {
+  background-color: rgb(190, 16, 167);
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 18px;
+  font-weight: bold;
+  color: white;
+  font-style: oblique;
+  transition:
+    opacity,
+    padding,
+    text-decoration 0.3s;
+}
+
+button:hover {
+  opacity: 0.9;
+  padding: 12px;
+  text-decoration: underline;
+}
+
+img {
+  margin-bottom: 15px;
+}
+
+h1 {
+  max-width: 70%;
+  overflow-wrap: anywhere;
+  line-height: 40px;
+}
+
+@media (max-width: 480px) {
+  span {
+    display: flex;
+    justify-content: center;
+  }
+}
