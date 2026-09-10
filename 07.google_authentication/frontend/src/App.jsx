@@ -23,6 +23,15 @@ function App() {
   };
 
   return (
+   <>
+   <button
+        className="back"
+        onClick={() =>
+          (window.location.href =
+            "https://alamtaufeeq854.github.io/mern-projects/")
+        }>
+        Back
+      </button>
     <BrowserRouter>
       <RefreshHandler setIsAuthenticated={setIsAuthenticated} />
       <Routes>
@@ -35,6 +44,8 @@ function App() {
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
+   
+   </>
   );
 }
 
